@@ -1,0 +1,16 @@
+.on,.off{
+    width: var(--size);
+    border-radius: 50%;
+    height: var(--size);
+    border: none;
+    margin: var(--size);
+}
+
+.on {
+    background-color: var(--blue);
+
+}
+
+.off {
+    background-color: rgb(55, 55, 55);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Test</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Socket.IO Client Test</h1>
+    <button id="simulateClick">Simulate Bench Click</button>
+    <script>
+        const socket = io();
+
+        socket.on('connect', () => {
+            console.log('Connected to WebSocket server');
+        });
+
+        socket.on('updateLight', (data) => {
+            console.log('Light update received:', data);
+        });
+
+        // Simulate bench click event
+        document.getElementById('simulateClick').addEventListener('click', () => {
+            const benchId = 1; // Example bench ID
+            const position = { x: 150, y: 100 }; // Example position
+            socket.emit('benchClicked', { benchId, position });
+        });
+    </script>
+</body>
+</html>
