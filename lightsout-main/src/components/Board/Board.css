@@ -33,18 +33,23 @@
 }
 
 .base-grid .on {
-    background-color: blue; /* Base grid color */
+    background-color: blue; 
+    
 }
 
 .base-grid .off {
-    background-color: gray; /* Base grid color */
+    background-color: gray; 
+    
 }
 
 .overlay-grid .on {
-    background-color: yellow; /* Overlay grid color */
-    box-shadow: 0 0 20px rgba(223, 255, 154, 10000); /* Larger shadow blur */
+    background-color: yellow; 
+    box-shadow: 0 0 20px rgba(223, 255, 154, 10000); 
+    border-radius: 0%;
+    
 }
 
 .overlay-grid .off {
-    background-color: darkgray; /* Overlay grid color */
+    background-color: darkgray; 
+    border-radius: 0%;
 }
